@@ -1,0 +1,13 @@
+obj/*
+externals/*
+bin/Debug/*
+.vs/*
+*.dll
+*.zip
+*.vsidx
+*.lock
+*.sln
+*.v2
+*.1
+HighPressureWaste.csproj.user
+Properties/launchSettings.json
