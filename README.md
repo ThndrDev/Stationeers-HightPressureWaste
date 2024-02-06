@@ -10,16 +10,16 @@ If you ignore them, the suit will still keep pumping to waste, even past the pre
 
 # Install Instructions
 
-[b]Step 1[/b] - Subscribe to this mod in the workshop;
-[b]Step 2[/b] - This mod uses scripts and it will only work if you use a modloader. Currently it support StationeersMods and BepInEx modloaders. Choose JUST ONE to install and follow the procedures:
-[list]
-[*] StationeersMods framework, it's the easiest and preffered way to load mods because after the installation, you just need to subscribe to the mod and it will be active. With StationeersMods you'll also get mods update automatically. Learn how to install it here: https://github.com/jixxed/StationeersMods#installation
+Step 1 - Subscribe to this mod in the workshop;
+Step 2 - This mod uses scripts and it will only work if you use a modloader. Currently it support StationeersMods and BepInEx modloaders. Choose JUST ONE to install and follow the procedures:
 
-[*] BepInEx: If you don't have BepInEx installed, download the x64 version available at https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21 and follow the BepInEx installation instructions but basically you will need to:
-[-]Drop and unpack it inside Stationeers folder
-[-]Start the game once to finish installing BepInEx and check if he created the folders called \Stationeers\BepInEx\plugins, if yes, the BepInEx installation is completed.
-[-]Download the lastest release from https://github.com/ThndrDev/Stationeers-HighPressureWaste/releases/ page.
-Unpack the dll file inside the folder \BepInEx\plugins
+* StationeersMods framework, it's the easiest and preffered way to load mods because after the installation, you just need to subscribe to the mod and it will be active. With StationeersMods you'll also get mods update automatically. Learn how to install it here: https://github.com/jixxed/StationeersMods#installation
+
+* BepInEx: If you don't have BepInEx installed, download the x64 version available at https://github.com/BepInEx/BepInEx/releases/tag/v5.4.21 and follow the BepInEx installation instructions but basically you will need to:
+   * Drop and unpack it inside Stationeers folder
+   * Start the game once to finish installing BepInEx and check if he created the folders called \Stationeers\BepInEx\plugins, if yes, the BepInEx installation is completed.
+   * Download the lastest release from https://github.com/ThndrDev/Stationeers-HighPressureWaste/releases/ page.
+   * Unpack the dll file inside the folder \BepInEx\plugins
 [/list]
 
 # Multiplayer Support
