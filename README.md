@@ -1,12 +1,12 @@
 # Stationeers mod "HighPressureWaste" for BepInEx.
 
 # Description:  
-This mod changes the suit to remove the max pressure the suit it can store in a waste canister. With this mod, your suit will keep pumping as long as you have a waste canister. You'll hear "Waste Warning" at 80% the max canister pressure and "Waste Critical at 90% the max pressure the canister you're using can hold. If you're using smart canister, that means:
+On Vanilla, the suit stops filling the waste canister when it reaches 4MPA of pressure.
+This mod changes this behavior so the suit will keep filling the waste, no matter the canister pressure.
 
-With normal canister, 8MPA for "warning" and 9MPA for "Critical";
-With Smart Canister, 16MPA for "warning" and 18MPA for "critical";
+The "Waste Warning" and "Waste Critical" alerts were also changed to consider the max pressure of the canister you're using. The alert will trigger at 80% and 90% of the canister pressure respectively. If it's a normal canister, the warning will appear when it's at 8MPA and Critical will kick in at 9MPA. With smart Canisters, the warning will kick in at 16MPA and critical at 18MPA.
 
-If you ignore them, the suit will still keep pumping to waste, even past the pressure limit of the canister, and if you don't empty or exchange the canister in time, ofc it will explode. 
+If you ignore the ladie's warnings, the canister will overpressurize and a Rapid Unscheduled Disassembly process will kick in.
 
 # Install Instructions
 
