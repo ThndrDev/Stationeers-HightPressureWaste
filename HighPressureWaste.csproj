@@ -16,6 +16,9 @@
     <Reference Include="BepInEx.Harmony">
       <HintPath>$(GameDir)\BepInEx\core\BepInEx.Harmony.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>G:\SteamLibrary\steamapps\common\Stationeers\rocketstation_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine">
       <HintPath>$(GameDir)\rocketstation_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>

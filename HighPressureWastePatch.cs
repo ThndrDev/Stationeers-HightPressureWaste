@@ -3,19 +3,22 @@ using JetBrains.Annotations;
 using UnityEngine;
 using Assets.Scripts.Objects.Clothing;
 using Assets.Scripts.UI;
-using SimpleSpritePacker;
+using Assets.Scripts.Atmospherics;
+using TMPro;
+using Assets.Scripts.Objects.Entities;
 
 namespace HighPressureWaste
 {
     [HarmonyPatch(typeof(Suit))]
     class Patch_Suit_Waste
     {
-        [HarmonyPatch("Awake")]
-        [HarmonyPostfix]
+        [HarmonyPatch("get_WasteMaxPressure")]
         [UsedImplicitly]
-        static private void GetWasteMaxPressurePatch(Suit __instance)
+        [HarmonyPrefix]
+        private static bool WasteMaxPressurePatch(ref PressurekPa __result)
         {
-            __instance.WasteMaxPressure = 60000f;
+            __result = new PressurekPa(60000);
+            return false;
         }
     }
 
@@ -36,6 +39,21 @@ namespace HighPressureWaste
         {
             __result = ____suit != null && (!____suit.WasteTank || ____suit.WasteTank.IsBroken || ____suit.WasteTank.Pressure >= ____suit.WasteTank.MaxPressure * 0.9f);
             return false;
+        }
+    }
+
+    [HarmonyPatch(typeof(StatusUpdates))]
+    class Patch_StatusUpdates_HandleIconUpdates
+    {
+        [HarmonyPatch("HandleIconUpdates")]
+        [UsedImplicitly]
+        [HarmonyPostfix]
+        private static void patch_HandleIconUpdates(StatusUpdates __instance, Human ____human)
+        { 
+            TMP_Text textWaste = __instance.TextWaste;
+            ISuit suit = ____human.Suit;
+            textWaste.text = Mathf.Round((((suit != null) ? suit.AsThing : null) && suit.WasteTank) ? ((suit.WasteTank.Pressure / suit.WasteTank.MaxPressure).ToFloat() * 100f) : 0f).ToString();
+            textWaste.text += "%"; 
         }
     }
 }
