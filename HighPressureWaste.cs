@@ -1,11 +1,10 @@
 ﻿using BepInEx;
-using BepInEx.Configuration;
 using HarmonyLib;
 using UnityEngine;
 
 namespace HighPressureWaste
 {
-    [BepInPlugin("HighPressureWaste", "HighPressureWaste", "0.1.0.0")]    
+    [BepInPlugin("HighPressureWaste", "HighPressureWaste", "0.1.1.0")]    
     public class HighPressureWastePlugin : BaseUnityPlugin
     {
         public static HighPressureWastePlugin Instance;
